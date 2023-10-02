@@ -1,0 +1,42 @@
+Express.js REST API with MySQL
+This is a simple Express.js application that provides RESTful API endpoints for managing claims in a MySQL database.
+
+Prerequisites
+Before you begin, ensure you have met the following requirements:
+
+Node.js installed on your machine. You can download it from nodejs.org.
+MySQL server installed and running. Create a database and table named classicmodels and claims respectively. You can import the database schema from folder ./lib/mysqlClaimsdb.sql.
+
+Configure the database connection:
+
+Open app.js and update the database connection details (host, user, password) as needed:
+
+const con = mysql.createConnection({
+    host: 'localhost',
+    user: 'your-username',
+    password: 'your-password',
+    database: 'classicmodels'
+});
+
+Start the Express server:
+
+npm start
+The server will start and listen on port 3000 by default. You can change the port in app.js if needed.
+
+
+
+API Endpoints
+
+POST /claims: Create a new claim.
+GET /claims: Retrieve all claims.
+GET /claims/:id: Retrieve a claim by ID.
+PUT /claims/:id: Update a claim by ID.
+DELETE /claims: Delete all claims.
+DELETE /claims/:id: Delete a claim by ID.
+
+
+Testing the APIs
+You can use POSTMAN to test the API endpoints. Download the POSTMAN collection from this link and import it into POSTMAN. The collection contains sample requests for each API endpoint.
+link : https://elements.getpostman.com/redirect?entityId=29719159-d071ce48-c1e7-4632-b1e3-0b02e45954c5&entityType=collection
+Also the .json file is given in ./lib.NodeJs-Assignment-5-Prashant-Gradious.postman_collection.json
+
